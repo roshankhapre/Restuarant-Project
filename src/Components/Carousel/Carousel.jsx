@@ -5,24 +5,46 @@ import "animate.css";
 
 // Texts array for each image
 const texts = [
-  { title: "Welcome to our Cafe", button1: "Booking", button2: "Explore" },
   {
-    title: "Experience our Restaurant",
+    title: "Welcome to K's Darshan Cafe And Restaurant",
+    description:
+      "Enjoy our selection of the finest meals and beverages in a relaxing atmosphere.",
+    button1: "Book a Table",
+    button2: "Explore More",
+  },
+  {
+    title: "Welcome to our Cozy Cafe",
+    description:
+      "A perfect spot for coffee lovers, offering a wide range of delicious brews.",
     button1: "Reserve Now",
     button2: "Explore",
   },
-  { title: "Relax in our Rooms", button1: "Book a Room", button2: "Explore" },
+  {
+    title: "Experience Fine Dining",
+    description:
+      "Indulge in our exquisite menu and top-notch service in a stylish setting.",
+    button1: "Reserve a Table",
+    button2: "Discover More",
+  },
+  {
+    title: "Relax in Our Beautiful Rooms",
+    description:
+      "Stay in one of our luxurious rooms with a beautiful view of the city.",
+    button1: "Book a Room",
+    button2: "View Rooms",
+  },
   {
     title: "Enjoy the Rooftop Cafe",
-    button1: "Book a Table",
-    button2: "Discover",
+    description:
+      "Take in the fresh air and stunning views while sipping your favorite drink.",
+    button1: "Reserve a Spot",
+    button2: "Discover Now",
   },
 ];
 
 const Carousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const numVisibleIndicators = 3;
-
   const imagesArray = Object.values(selectedAssets);
 
   useEffect(() => {
@@ -45,7 +67,7 @@ const Carousel = () => {
   );
 
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden bg-gray-900">
       {/* Carousel Container */}
       <div className="relative w-full h-full">
         {imagesArray.map((image, index) => (
@@ -60,20 +82,23 @@ const Carousel = () => {
             {/* Carousel Image */}
             <img
               src={image}
-              alt={texts[index]?.title || `Carousel slide ${index + 1}`} // Updated alt attribute
+              alt={texts[index]?.title || `Carousel slide ${index + 1}`}
               className="w-full h-full object-cover"
             />
             {index === currentIndex && texts[index] && (
-              <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center bg-black bg-opacity-50 z-30">
-                <h1 className="wow animate__animated animate__backInDown text-3xl sm:text-4xl lg:text-6xl font-bold mb-4">
+              <div className="absolute inset-0 flex flex-col items-center justify-center text-white text-center bg-black bg-opacity-60 z-30 p-4 ">
+                <h1 className="wow animate__animated animate__fadeInDown text-3xl sm:text-4xl lg:text-7xl font-bold mb-4 py-10">
                   {texts[index].title}
                 </h1>
+                <p className="wow animate__animated animate__fadeInUp text-lg sm:text-xl lg:text-2xl mb-4 py-20">
+                  {texts[index].description}
+                </p>
                 <div className="flex space-x-4 z-40 mt-4">
-                  <button className="wow animate__animated animate__bounceInLeft px-4 py-2 sm:px-6 sm:py-3 text-base sm:text-xl lg:text-2xl rounded bg-red-500 hover:bg-red-600 transition duration-300">
+                  <button className="wow animate__animated animate__bounceInLeft px-4 py-2 sm:px-6 sm:py-3 text-base sm:text-xl lg:text-2xl rounded-lg bg-red-500 hover:bg-red-600 transition duration-300 shadow-lg hover:shadow-xl">
                     {texts[index].button1}
                   </button>
                   <button
-                    className="wow animate__animated animate__bounceInRight px-4 py-2 sm:px-6 sm:py-3 text-base sm:text-xl lg:text-2xl rounded bg-red-500 hover:bg-red-600 transition duration-300"
+                    className="wow animate__animated animate__bounceInRight px-4 py-2 sm:px-6 sm:py-3 text-base sm:text-xl lg:text-2xl rounded-lg bg-red-500 hover:bg-red-600 transition duration-300 shadow-lg hover:shadow-xl"
                     onClick={() => alert(`${texts[index].button2} clicked!`)}
                   >
                     {texts[index].button2}
@@ -101,7 +126,7 @@ const Carousel = () => {
             >
               <img
                 src={image}
-                alt={`Slide ${index + visibleIndicatorsStart + 1} indicator`} // Updated alt attribute
+                alt={`Slide ${index + visibleIndicatorsStart + 1} indicator`}
                 className="w-full h-full object-cover"
               />
             </button>

@@ -128,8 +128,8 @@ const HomeFoodCategory = () => {
             key={category}
             className={`px-6 md:px-8 py-2 md:py-3 text-sm md:text-lg font-semibold rounded-full transition-all duration-300 shadow-lg ${
               selectedCategory === category
-                ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white transform scale-105"
-                : "bg-gray-200 text-gray-600 hover:bg-gray-300 hover:scale-105"
+                ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white "
+                : "bg-gray-200 text-gray-600 hover:bg-gray-300 "
             }`}
             onClick={() => setSelectedCategory(category)}
           >
@@ -142,7 +142,7 @@ const HomeFoodCategory = () => {
         {categoriesData[selectedCategory].map((item) => (
           <div
             key={item.id}
-            className="border p-4 sm:p-6 rounded-xl shadow-xl bg-white bg-opacity-90 backdrop-filter transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+            className="border p-4 sm:p-6 rounded-xl shadow-xl bg-gr bg-opacity-90 backdrop-filter transition-transform duration-300 "
           >
             <div className="relative overflow-hidden rounded-lg mb-4">
               <img
@@ -150,7 +150,7 @@ const HomeFoodCategory = () => {
                 alt={item.mealName}
                 className="w-full h-60 md:h-80 object-cover rounded-lg transform transition-transform duration-500 hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 hover:opacity-60 transition-opacity duration-300 ease-in-out rounded-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 "></div>
             </div>
             <div className="p-2 sm:p-4 text-center">
               <h2 className="font-bold text-gray-900 mb-2 text-lg sm:text-2xl md:text-3xl">

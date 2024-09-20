@@ -8,41 +8,41 @@ const servicesBooking = [
     title: "Cafe Services",
     description:
       "Relax and enjoy premium coffees, freshly baked pastries, and light meals in a cozy atmosphere.",
-    img: selectedAssets.cafeinterior,
+    img: selectedAssets.cafe5,
   },
   {
     id: 2,
     title: "Restaurant Services",
     description:
       "Savor meticulously crafted dishes in an elegant setting, perfect for every occasion.",
-    img: selectedAssets.restauranthall,
+    img: selectedAssets.restaurantimage,
   },
   {
     id: 3,
     title: "Rooftop Services",
     description:
       "Dine under the stars with breathtaking city views and a gourmet menu tailored for you.",
-    img: selectedAssets.roofdining,
+    img: selectedAssets.rooftop,
   },
   {
     id: 4,
     title: "Hotel Services",
     description:
       "Experience ultimate comfort in our plush rooms, designed for relaxation and rejuvenation.",
-    img: selectedAssets.hotelroom,
+    img: selectedAssets.hotelroom1,
   },
 ];
 
 const BookingCard = () => {
   return (
-    <div className="bg-gradient-to-b from-gray-100 to-gray-300 min-h-screen py-12 px-6 sm:px-10 lg:px-20">
+    <div className="bg-gradient-to-b from-gray-100 to-gray-300 min-h-screen py-12 px-6 sm:px-10 lg:px-20 ">
       {/* Section Title */}
       <div className="text-center mb-12">
-        <h2 className="inline-block text-3xl sm:text-4xl lg:text-5xl font-semibold text-white bg-gradient-to-r from-red-500 to-pink-500 py-2 px-6 rounded-full shadow-lg hover:scale-105 transform transition duration-300 ease-in-out">
+        <h2 className="inline-block text-3xl sm:text-4xl lg:text-5xl font-semibold text-white bg-red-700 py-2 px-6 rounded-lg shadow-lg ">
           Our Services
         </h2>
         <div className="mt-10">
-          <h4 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-8">
+          <h4 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-gray-900 mb-8 py-10">
             Explore Our Services
           </h4>
         </div>
@@ -53,7 +53,7 @@ const BookingCard = () => {
         {servicesBooking.map((service) => (
           <div
             key={service.id}
-            className="border p-4 sm:p-6 rounded-xl shadow-xl bg-white bg-opacity-80 backdrop-filter transition-transform duration-300 hover:scale-105 hover:shadow-2xl"
+            className="border p-4 sm:p-6 rounded-xl shadow-xl bg-white bg-opacity-80 backdrop-filter transition-transform duration-300 hover:shadow-2xl"
           >
             {/* Image Section */}
             <div className="relative">
@@ -77,9 +77,9 @@ const BookingCard = () => {
 
             {/* Button */}
             <div className="flex justify-center py-4">
-              <button className="flex items-center justify-center gap-2 text-white text-sm sm:text-lg bg-gradient-to-r from-red-500 to-pink-500 px-4 py-2 sm:px-6 sm:py-3 rounded-md shadow-md hover:from-purple-600 hover:to-pink-600 transform transition-transform duration-300 ease-in-out hover:scale-105">
+              <button className="flex items-center justify-center gap-2 text-white text-sm sm:text-lg bg-red-500 hover:bg-red-700   px-4 py-2 sm:px-6 sm:py-3 rounded-md shadow-md  transform transition-transform duration-300 ease-in-out hover:scale-105">
                 Read More
-                <ArrowForwardIcon className="ml-2 transform transition-transform duration-300 hover:translate-x-1" />
+                <ArrowForwardIcon className="ml-2 transform transition-transform duration-300" />
               </button>
             </div>
           </div>

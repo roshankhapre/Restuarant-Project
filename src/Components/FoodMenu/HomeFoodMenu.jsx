@@ -92,14 +92,14 @@ const HomeFoodMenu = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
           {/* Starter Menu */}
           <div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-white mb-4 md:mb-6">
+            <h2 className="my-20 font-praise text-2xl sm:text-3xl md:text-4xl  text-center text-white mb-4 md:mb-6">
               Starter Menu
             </h2>
-            <div className="space-y-6 sm:space-y-8">
+            <div className="my-20 space-y-6 sm:space-y-8">
               {FoodMenu.StarterMenu.map((item) => (
                 <div
                   key={item.id}
-                  className="flex items-center p-4 sm:p-6 border border-gray-300 rounded-lg shadow-md bg-black"
+                  className=" flex items-center p-4 sm:p-6 border border-gray-300 rounded-lg shadow-md bg-black"
                 >
                   <img
                     src={item.image}
@@ -107,10 +107,10 @@ const HomeFoodMenu = () => {
                     className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border-2 border-red-500 mr-4 sm:mr-8 md:mr-16"
                   />
                   <div className="flex-1">
-                    <h3 className="text-lg sm:text-xl font-semibold text-white">
+                    <h3 className="text-lg sm:text-3xl font-semibold text-white font-caveat">
                       {item.mealName}
                     </h3>
-                    <p className="text-sm sm:text-md text-white">
+                    <p className="text-sm sm:text-xl text-white font-caveat">
                       ₹{item.mealPrice}
                     </p>
                   </div>
@@ -121,25 +121,25 @@ const HomeFoodMenu = () => {
 
           {/* Main Dishes */}
           <div>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-white mb-4 md:mb-6">
+            <h2 className="my-20 font-praise text-2xl sm:text-3xl md:text-4xl text-center text-white mb-4 md:mb-20 ">
               Main Dishes
             </h2>
-            <div className="space-y-6 sm:space-y-8">
+            <div className="my-20 space-y-6 sm:space-y-8">
               {FoodMenu.MainDishes.map((item) => (
                 <div
                   key={item.id}
-                  className="flex items-center p-4 sm:p-6 border border-gray-300 rounded-lg shadow-md bg-black"
+                  className=" flex items-center p-4 sm:p-6 border border-gray-300 rounded-lg shadow-md bg-black"
                 >
                   <img
                     src={item.image}
                     alt={item.mealName}
-                    className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border-2 border-red-500 mr-4 sm:mr-8 md:mr-16"
+                    className="w-12 h-12 sm:w-16 sm:h-16 rounded-full border-2 border-red-500 mr-4 sm:mr-8 md:mr-16 "
                   />
                   <div className="flex-1">
-                    <h3 className="text-lg sm:text-xl font-semibold text-white">
+                    <h3 className=" text-lg sm:text-3xl font-semibold text-white font-caveat">
                       {item.mealName}
                     </h3>
-                    <p className="text-sm sm:text-md text-white">
+                    <p className="text-sm sm:text-xl text-white font-caveat">
                       ₹{item.mealPrice}
                     </p>
                   </div>
